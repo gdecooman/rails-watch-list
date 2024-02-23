@@ -1,4 +1,13 @@
 <%= @list.name %>
+
+<p>Add a movie</p>
+
+<%= simple_form_for [@list, @bookmark] do |t| %>
+<%= t.association :movie %>
+<%= t.input :comment %>
+<%= t.submit %>
+<% end %>
 <p>
 <%= link_to "Back", lists_path %>
 </p>
+¢
